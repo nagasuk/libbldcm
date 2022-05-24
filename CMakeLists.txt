@@ -31,9 +31,9 @@ set_target_properties(bldcm PROPERTIES
 )
 target_include_directories(bldcm PRIVATE $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>)
 target_include_directories(bldcm INTERFACE $<INSTALL_INTERFACE:include>)
-target_link_libraries(bldcm PUBLIC fpgasoc::fpgasoc)
+target_link_libraries(bldcm PUBLIC fpgasoc)
 target_compile_options(bldcm PRIVATE -Wall)
-target_compile_features(bldcm PUBLIC cxx_std_17)
+target_compile_features(bldcm PRIVATE cxx_std_17)
 
 # [ Installation ]
 include(CMakePackageConfigHelpers)
